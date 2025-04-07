@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-snapshot
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      image:
+        options:
+          response_format: url
+
