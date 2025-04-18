@@ -19,7 +19,7 @@ class ImageController {
 
   @PostMapping("/generate")
   @ResponseStatus(HttpStatus.OK)
-  public ImageResponseDTO generateImage(@Valid @RequestBody ImageRequestDTO request) {
-    return imageService.generateImage(request);
+  public ImageResponseDTO generateImages(@Valid @RequestBody ImageRequestDTO request) {
+    return imageService.generateImages(request);
   }
 }

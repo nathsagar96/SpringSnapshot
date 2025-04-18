@@ -19,7 +19,7 @@ public class ImageService {
     this.validator = validator;
   }
 
-  public ImageResponseDTO generateImage(ImageRequestDTO request) {
+  public ImageResponseDTO generateImages(ImageRequestDTO request) {
     validator.validateRequest(request);
 
     OpenAiImageOptions options =
@@ -37,6 +37,8 @@ public class ImageService {
     ImageResponse imageResponse = imageModel.call(imagePrompt);
 
     return new ImageResponseDTO(
-        imageResponse.getResult().getOutput().getUrl(), imageResponse.getResult().getMetadata());
+        imageResponse.getResults().stream()
+            .map(imageGeneration -> imageGeneration.getOutput().getUrl())
+            .toList());
   }
 }

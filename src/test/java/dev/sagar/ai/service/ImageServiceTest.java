@@ -8,6 +8,7 @@ import dev.sagar.ai.dto.ImageRequestDTO;
 import dev.sagar.ai.dto.ImageResponseDTO;
 import dev.sagar.ai.exception.InvalidParameterException;
 import dev.sagar.ai.validator.ImageRequestValidator;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -32,38 +33,38 @@ class ImageServiceTest {
   @Mock private ImageModel imageModel;
   @Mock private ImageResponse imageResponse;
   @Mock private ImageGeneration imageGeneration;
-  @Mock private  Image image;
+  @Mock private Image image;
   @Mock private ImageRequestValidator validator;
   @InjectMocks private ImageService imageService;
 
   @Test
-  void generateImage_shouldValidateRequestBeforeProcessing() {
+  void generateImages_shouldValidateRequestBeforeProcessing() {
     ImageRequestDTO request = createValidRequest();
     mockSuccessfulImageGeneration();
 
-    imageService.generateImage(request);
+    imageService.generateImages(request);
 
     verify(validator).validateRequest(request);
   }
 
   @Test
-  void generateImage_shouldThrowWhenValidationFails() {
+  void generateImages_shouldThrowWhenValidationFails() {
     ImageRequestDTO request = createValidRequest();
     doThrow(new InvalidParameterException("Invalid request"))
         .when(validator)
         .validateRequest(request);
 
-    assertThrows(InvalidParameterException.class, () -> imageService.generateImage(request));
+    assertThrows(InvalidParameterException.class, () -> imageService.generateImages(request));
 
     verify(imageModel, never()).call(any());
   }
 
   @Test
-  void generateImage_shouldBuildCorrectOptions() {
+  void generateImages_shouldBuildCorrectOptions() {
     ImageRequestDTO request = createValidRequest();
     mockSuccessfulImageGeneration();
 
-    imageService.generateImage(request);
+    imageService.generateImages(request);
 
     verify(imageModel)
         .call(
@@ -81,36 +82,22 @@ class ImageServiceTest {
   }
 
   @Test
-  void generateImage_shouldReturnCorrectResponse() {
+  void generateImages_shouldReturnCorrectResponse() {
     ImageRequestDTO request = createValidRequest();
     ImageResponse mockResponse = mockSuccessfulImageGeneration();
 
-    ImageResponseDTO response = imageService.generateImage(request);
+    ImageResponseDTO response = imageService.generateImages(request);
 
-    assertEquals(testImageUrl, response.imageUrl());
+    assertEquals(testImageUrl, response.imageUrlList().getFirst());
     verify(imageModel).call(any(ImagePrompt.class));
   }
 
   @Test
-  void generateImage_shouldPropagateModelExceptions() {
+  void generateImages_shouldPropagateModelExceptions() {
     ImageRequestDTO request = createValidRequest();
     when(imageModel.call(any(ImagePrompt.class))).thenThrow(new RuntimeException("API Error"));
 
-    assertThrows(RuntimeException.class, () -> imageService.generateImage(request));
-  }
-
-  @Test
-  void generateImage_shouldHandleNullMetadata() {
-    ImageRequestDTO request = createValidRequest();
-    when(imageResponse.getResult()).thenReturn(imageGeneration);
-    when(imageGeneration.getOutput()).thenReturn(image);
-    when(image.getUrl()).thenReturn(testImageUrl);
-    when(imageModel.call(any(ImagePrompt.class))).thenReturn(imageResponse);
-
-    ImageResponseDTO response = imageService.generateImage(request);
-
-    assertEquals(testImageUrl, response.imageUrl());
-    assertNull(response.metadata());
+    assertThrows(RuntimeException.class, () -> imageService.generateImages(request));
   }
 
   private ImageRequestDTO createValidRequest() {
@@ -127,8 +114,8 @@ class ImageServiceTest {
   }
 
   private ImageResponse mockSuccessfulImageGeneration() {
-    when(imageResponse.getResult()).thenReturn(imageGeneration);
-    when(imageResponse.getResult().getOutput()).thenReturn(image);
+    when(imageResponse.getResults()).thenReturn(List.of(imageGeneration));
+    when(imageGeneration.getOutput()).thenReturn(image);
     when(image.getUrl()).thenReturn(testImageUrl);
     when(imageModel.call(any(ImagePrompt.class))).thenReturn(imageResponse);
 

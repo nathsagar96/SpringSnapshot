@@ -1,5 +1,5 @@
 package dev.sagar.ai.dto;
 
-import org.springframework.ai.image.ImageGenerationMetadata;
+import java.util.List;
 
-public record ImageResponseDTO(String imageUrl, ImageGenerationMetadata metadata) {}
+public record ImageResponseDTO(List<String> imageUrlList) {}

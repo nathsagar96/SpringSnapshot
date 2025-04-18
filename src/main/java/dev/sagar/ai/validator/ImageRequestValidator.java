@@ -16,7 +16,7 @@ public class ImageRequestValidator {
 
   public static final Set<String> VALID_QUALITIES = Set.of("standard", "hd");
   public static final Set<String> VALID_STYLES = Set.of("natural", "vivid");
-  private static final Set<String> DALL_E_2_VALID_DIMENSIONS =
+  public static final Set<String> DALL_E_2_VALID_DIMENSIONS =
       Set.of("256x256", "512x512", "1024x1024");
   public static final Set<String> DALL_E_3_VALID_DIMENSIONS =
       Set.of("1024x1024", "1792x1024", "1024x1792");

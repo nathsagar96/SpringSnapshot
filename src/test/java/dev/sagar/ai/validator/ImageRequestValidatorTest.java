@@ -277,7 +277,8 @@ class ImageRequestValidatorTest {
   @Test
   void shouldHandleCaseInsensitiveModelNames() {
     ImageRequestDTO request1 =
-        new ImageRequestDTO("user123", "Case test", "DALL-E-2", 256, 256, "standard", "natural", 1);
+        new ImageRequestDTO(
+            "user123", "Case test", "DALL-E-2", 256, 256, "standard", "natural", 1);
     ImageRequestDTO request2 =
         new ImageRequestDTO(
             "user123", "Case test", "dall-e-3", 1024, 1024, "standard", "natural", 1);
