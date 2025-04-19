@@ -1,4 +1,4 @@
-# 🎨 SpringSnapshot
+# 🎨 Spring Snapshot
 
 Generate high-quality images using OpenAI's DALL-E models through a simple REST API built with Spring Boot and Spring AI.
 
@@ -36,8 +36,8 @@ Generate high-quality images using OpenAI's DALL-E models through a simple REST 
 
 1. Clone the repository
 ```bash
-git clone https://github.com/nathsagar96/SpringSnapshot.git
-cd SpringSnapshot
+git clone https://github.com/nathsagar96/spring-snapshot.git
+cd spring-snapshot
 ```
 
 2. Set up your OpenAI API key
