@@ -9,7 +9,7 @@ Generate high-quality images using OpenAI's DALL-E models through a simple REST 
 
 ## 📑 Table of Contents
 
-- [🎨 SpringSnapshot](#-springsnapshot)
+- [🎨 Spring Snapshot](#-spring-snapshot)
   - [📑 Table of Contents](#-table-of-contents)
   - [✨ Features](#-features)
   - [🚀 Installation](#-installation)
