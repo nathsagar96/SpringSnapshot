@@ -1,6 +1,7 @@
 # 🎨 Spring Snapshot
 
-Generate high-quality images using OpenAI's DALL-E models through a simple REST API built with Spring Boot and Spring AI.
+Generate high-quality images using OpenAI's DALL-E models through a simple REST API built with Spring Boot and Spring
+AI.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java](https://img.shields.io/badge/Java-21-orange)](https://www.oracle.com/java/technologies/downloads/#java21)
@@ -9,19 +10,17 @@ Generate high-quality images using OpenAI's DALL-E models through a simple REST 
 
 ## 📑 Table of Contents
 
-- [🎨 Spring Snapshot](#-spring-snapshot)
-  - [📑 Table of Contents](#-table-of-contents)
-  - [✨ Features](#-features)
-  - [🚀 Installation](#-installation)
-  - [📖 Usage](#-usage)
-  - [📚 API Reference](#-api-reference)
+- [✨ Features](#-features)
+- [🚀 Installation](#-installation)
+- [📖 Usage](#-usage)
+- [📚 API Reference](#-api-reference)
     - [Image Generation Endpoint](#image-generation-endpoint)
-      - [Request Body Parameters:](#request-body-parameters)
-  - [🛠 Technology Stack](#-technology-stack)
-  - [🤝 Contributing](#-contributing)
-  - [📄 License](#-license)
-  - [📫 Contact](#-contact)
-  - [🙏 Acknowledgements](#-acknowledgements)
+        - [Request Body Parameters:](#request-body-parameters)
+- [🛠 Technology Stack](#-technology-stack)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📫 Contact](#-contact)
+- [🙏 Acknowledgements](#-acknowledgements)
 
 ## ✨ Features
 
@@ -35,17 +34,20 @@ Generate high-quality images using OpenAI's DALL-E models through a simple REST 
 ## 🚀 Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/nathsagar96/spring-snapshot.git
 cd spring-snapshot
 ```
 
 2. Set up your OpenAI API key
+
 ```bash
 export OPENAI_API_KEY=your_api_key_here
 ```
 
 3. Build and run the application
+
 ```bash
 ./mvnw spring-boot:run
 ```
@@ -76,6 +78,7 @@ curl -X POST http://localhost:8080/api/v1/images/generate \
 `POST /api/v1/images/generate`
 
 #### Request Body Parameters:
+
 - `userId`: User identifier
 - `prompt`: Image description
 - `model`: Either "dall-e-2" or "dall-e-3"
