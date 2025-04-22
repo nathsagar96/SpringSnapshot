@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>dev.sagar</groupId>
-    <artifactId>spring-snapshot</artifactId>
+    <artifactId>artifactory</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>spring-snapshot</name>
+    <name>artifactory</name>
     <description>Stock Photo Generator using Spring AI</description>
 
     <properties>

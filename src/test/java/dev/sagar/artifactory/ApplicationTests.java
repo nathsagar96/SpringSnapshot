@@ -1,4 +1,4 @@
-package dev.sagar.ai;
+package dev.sagar.artifactory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

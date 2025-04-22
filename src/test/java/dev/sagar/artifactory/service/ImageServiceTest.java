@@ -1,13 +1,13 @@
-package dev.sagar.ai.service;
+package dev.sagar.artifactory.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-import dev.sagar.ai.dto.ImageRequestDTO;
-import dev.sagar.ai.dto.ImageResponseDTO;
-import dev.sagar.ai.exception.InvalidParameterException;
-import dev.sagar.ai.validator.ImageRequestValidator;
+import dev.sagar.artifactory.dto.ImageRequestDTO;
+import dev.sagar.artifactory.dto.ImageResponseDTO;
+import dev.sagar.artifactory.exception.InvalidParameterException;
+import dev.sagar.artifactory.validator.ImageRequestValidator;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

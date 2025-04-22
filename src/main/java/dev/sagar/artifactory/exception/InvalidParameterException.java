@@ -1,4 +1,4 @@
-package dev.sagar.ai.exception;
+package dev.sagar.artifactory.exception;
 
 public class InvalidParameterException extends RuntimeException {
   public InvalidParameterException(String message) {

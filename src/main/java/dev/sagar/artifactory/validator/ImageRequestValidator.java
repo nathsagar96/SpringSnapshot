@@ -1,7 +1,7 @@
-package dev.sagar.ai.validator;
+package dev.sagar.artifactory.validator;
 
-import dev.sagar.ai.dto.ImageRequestDTO;
-import dev.sagar.ai.exception.InvalidParameterException;
+import dev.sagar.artifactory.dto.ImageRequestDTO;
+import dev.sagar.artifactory.exception.InvalidParameterException;
 import java.util.Set;
 import org.springframework.ai.openai.api.OpenAiImageApi;
 import org.springframework.stereotype.Component;

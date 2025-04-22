@@ -1,6 +1,6 @@
-package dev.sagar.ai.exception;
+package dev.sagar.artifactory.exception;
 
-import dev.sagar.ai.dto.ErrorDTO;
+import dev.sagar.artifactory.dto.ErrorDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

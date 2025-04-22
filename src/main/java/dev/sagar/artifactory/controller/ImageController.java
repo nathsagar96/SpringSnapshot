@@ -1,8 +1,8 @@
-package dev.sagar.ai.controller;
+package dev.sagar.artifactory.controller;
 
-import dev.sagar.ai.dto.ImageRequestDTO;
-import dev.sagar.ai.dto.ImageResponseDTO;
-import dev.sagar.ai.service.ImageService;
+import dev.sagar.artifactory.dto.ImageRequestDTO;
+import dev.sagar.artifactory.dto.ImageResponseDTO;
+import dev.sagar.artifactory.service.ImageService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

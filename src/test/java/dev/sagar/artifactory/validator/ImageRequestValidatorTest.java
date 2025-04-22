@@ -1,9 +1,9 @@
-package dev.sagar.ai.validator;
+package dev.sagar.artifactory.validator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import dev.sagar.ai.dto.ImageRequestDTO;
-import dev.sagar.ai.exception.InvalidParameterException;
+import dev.sagar.artifactory.dto.ImageRequestDTO;
+import dev.sagar.artifactory.exception.InvalidParameterException;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

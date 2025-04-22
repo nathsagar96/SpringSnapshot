@@ -1,4 +1,4 @@
-package dev.sagar.ai.dto;
+package dev.sagar.artifactory.dto;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

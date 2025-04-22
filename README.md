@@ -1,4 +1,4 @@
-# 🎨 Spring Snapshot
+# 🎨 Artifactory
 
 Generate high-quality images using OpenAI's DALL-E models through a simple REST API built with Spring Boot and Spring
 AI.
@@ -36,8 +36,8 @@ AI.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/nathsagar96/spring-snapshot.git
-cd spring-snapshot
+git clone https://github.com/nathsagar96/artifactory.git
+cd artifactory
 ```
 
 2. Set up your OpenAI API key
@@ -119,4 +119,4 @@ Sagar Nath - [@nathsagar96](https://github.com/nathsagar96)
 
 - [Spring AI](https://docs.spring.io/spring-ai/reference/) for the AI integration framework
 - [OpenAI](https://openai.com/) for the DALL-E models
-- Spring Boot team for the excellent framework
+- [Spring Boot](https://spring.io/projects/spring-boot) for the web framework

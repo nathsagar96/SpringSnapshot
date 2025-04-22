@@ -1,8 +1,8 @@
-package dev.sagar.ai.service;
+package dev.sagar.artifactory.service;
 
-import dev.sagar.ai.dto.ImageRequestDTO;
-import dev.sagar.ai.dto.ImageResponseDTO;
-import dev.sagar.ai.validator.ImageRequestValidator;
+import dev.sagar.artifactory.dto.ImageRequestDTO;
+import dev.sagar.artifactory.dto.ImageResponseDTO;
+import dev.sagar.artifactory.validator.ImageRequestValidator;
 import org.springframework.ai.image.*;
 import org.springframework.ai.image.ImagePrompt;
 import org.springframework.ai.openai.OpenAiImageOptions;

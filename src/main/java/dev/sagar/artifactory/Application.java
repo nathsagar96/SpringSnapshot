@@ -1,4 +1,4 @@
-package dev.sagar.ai;
+package dev.sagar.artifactory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
